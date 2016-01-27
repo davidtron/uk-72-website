@@ -11,6 +11,7 @@
     width: 73.607%;
 }
 
+/* Mobile view stack the warnings and map and make map container smaller */
 @media screen and (max-width: 480px) {
     .col-md-4, .col-md-8 {
         width: 100%;
@@ -18,6 +19,10 @@
 
     .input-group {
         padding-top: 50px;
+    }
+
+    .warning-map {
+        height: 300px !important;
     }
 }
 
