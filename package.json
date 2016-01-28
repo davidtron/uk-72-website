@@ -1,0 +1,31 @@
+{
+  "name": "uk-72-website",
+  "version": "0.0.1",
+  "description": "Static deployment of city72 for the UK",
+  "main": "dist/index.html",
+  "scripts": {
+    "start": "node build.js ; http-server dist"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/davidtron/uk-72-website.git"
+  },
+  "keywords": [
+    "resilience",
+    "uk",
+    "uk72"
+  ],
+  "devDependencies": {
+    "fs-extra": "^0.26.5",
+    "node-bourbon": "^4.2.3",
+    "node-neat": "^1.7.2",
+    "node-sass": "^3.4.2",
+    "path": "^0.12.7"
+  },
+  "author": "David Parry",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/davidtron/uk-72-website/issues"
+  },
+  "homepage": "https://github.com/davidtron/uk-72-website#readme"
+}

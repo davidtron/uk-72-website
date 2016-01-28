@@ -1,0 +1,53 @@
+
+/* Regular */
+@font-face {
+  font-family: 'Noto Sans';
+  src: url('fonts/notosans_regular/NotoSans-Regular-webfont.eot');
+  src: url('fonts/notosans_regular/NotoSans-Regular-webfont.eot?#iefix') format('embedded-opentype'),
+       url('fonts/notosans_regular/NotoSans-Regular-webfont.woff') format('woff'),
+       url('fonts/notosans_regular/NotoSans-Regular-webfont.ttf') format('truetype'),
+       url('fonts/notosans_regular/NotoSans-Regular-webfont.svg#noto_sansregular') format('svg');
+  font-style: normal;
+  font-weight: 400;
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215, U+E0FF, U+EFFD, U+F000;
+}
+
+/* Bold */
+@font-face {
+  font-family: 'Noto Sans';
+  src: url('fonts/notosans_bold/NotoSans-Bold-webfont.eot');
+  src: url('fonts/notosans_bold/NotoSans-Bold-webfont.eot?#iefix') format('embedded-opentype'),
+       url('fonts/notosans_bold/NotoSans-Bold-webfont.woff') format('woff'),
+       url('fonts/notosans_bold/NotoSans-Bold-webfont.ttf') format('truetype'),
+       url('fonts/notosans_bold/NotoSans-Bold-webfont.svg#noto_sansbold') format('svg');
+  font-style: normal;
+  font-weight: 700;
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215, U+E0FF, U+EFFD, U+F000;
+}
+
+
+/* latin */
+@font-face {
+  font-family: 'Noto Sans';
+  src: url('fonts/notosans_italic/NotoSans-Italic-webfont.eot');
+  src: url('fonts/notosans_italic/NotoSans-Italic-webfont.eot?#iefix') format('embedded-opentype'),
+       url('fonts/notosans_italic/NotoSans-Italic-webfont.woff') format('woff'),
+       url('fonts/notosans_italic/NotoSans-Italic-webfont.ttf') format('truetype'),
+       url('fonts/notosans_italic/NotoSans-Italic-webfont.svg#noto_sansitalic') format('svg');
+  font-style: italic;
+  font-weight: 400;
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215, U+E0FF, U+EFFD, U+F000;
+}
+
+/* latin */
+@font-face {
+  font-family: 'Noto Sans';
+  src: url('fonts/notosans_bolditalic/NotoSans-BoldItalic-webfont.eot');
+  src: url('fonts/notosans_bolditalic/NotoSans-BoldItalic-webfont.eot?#iefix') format('embedded-opentype'),
+       url('fonts/notosans_bolditalic/NotoSans-BoldItalic-webfont.woff') format('woff'),
+       url('fonts/notosans_bolditalic/NotoSans-BoldItalic-webfont.ttf') format('truetype'),
+       url('fonts/notosans_bolditalic/NotoSans-BoldItalic-webfont.svg#noto_sansbold_italic') format('svg');
+  font-style: italic;
+  font-weight: 700;
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215, U+E0FF, U+EFFD, U+F000;
+}
