@@ -16,7 +16,9 @@
     "uk72"
   ],
   "devDependencies": {
+    "coffee-script": "^1.10.0",
     "fs-extra": "^0.26.5",
+    "mincer": "^1.4.1",
     "node-bourbon": "^4.2.3",
     "node-neat": "^1.7.2",
     "node-sass": "^3.4.2",

@@ -35,3 +35,29 @@ sass.render({
         console.log(error);
     }
 });
+
+var processJs = function(name, environment) {
+    var outputName = 'dist/assets/' + name + "-dist.js";
+    var asset = environment.findAsset(name);
+    fs.writeFile(outputName, asset.toString(), function(err){
+        if(!err){
+            console.log('written to '+ outputName);
+        } else {
+            throw new Error(err);
+        }
+    });
+}
+
+
+var Mincer  = require('mincer');
+
+var environment = new Mincer.Environment();
+environment.appendPath('assets/javascripts');
+environment.appendPath('assets/components');
+
+processJs('application', environment);
+processJs('home', environment);
+processJs('supplies', environment);
+
+
+
