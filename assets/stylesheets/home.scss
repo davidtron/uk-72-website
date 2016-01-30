@@ -16,11 +16,20 @@
 
 	h1 {
 		font-size: 3.5rem;
-		margin-top: 3rem;
 		text-shadow: 0 0 40px rgba(0, 0, 0, 0.15);
 		padding: 0 5rem;
 	}
 
+	h1:before {
+		font-family: 'sf72-icons';
+		font-size: 5rem;
+		font-weight: 400;
+		content: 'C';
+		color: #FFFFFF;
+		-webkit-font-smoothing: antialiased;
+		display: block;
+		margin-bottom: 30px
+	}
 }
 
 .questions {
