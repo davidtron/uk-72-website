@@ -6,9 +6,11 @@
 
 #logo {
 	@include span-columns(3.37061107);
-	margin-top: 1.5rem;
+	margin-top: 1.7rem;
 	text-align: center;
 	padding: .5rem 1rem;
+	font-size: 1.6rem;
+	font-weight: 700;
 
 	img {
 		max-width: 170px;

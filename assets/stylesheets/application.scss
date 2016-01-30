@@ -124,7 +124,7 @@ a {
 }
 
 h1, h2, h3, h4, h5 {
-	font-weight: normal;
+	font-weight: 700;
 }
 
 ::selection {
@@ -139,8 +139,8 @@ $gutter: 30px;
 $border-box-sizing: false;
 $mobile: new-breakpoint(max-width 480px 4);
 
-h2 {font-size: 2.125rem; font-family: $font-bold;}
-h3 {font-size: 1.5rem; font-family: $font-medium;}
+h2 {font-size: 2.125rem; font-family: $font-bold; }
+h3 {font-size: 1.5rem; font-family: $font-medium; }
 h4 {font-size: 1.3rem;}
 h5 {margin: 0}
 
@@ -176,7 +176,7 @@ body {
 .page-intro {
 
 	.big-title {
-		background: url() no-repeat left top;
+		background: url("http://placekitten.com/1020/538") no-repeat left top;
 		width: 1020px;
 		height: 538px;
 		text-align: center;
