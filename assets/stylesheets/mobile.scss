@@ -566,6 +566,8 @@ $mobile-padding: 23px;
 
 			&.facebook:before,
 			&.twitter:before,
+			&.airbnb:before,
+			&.neighbors:before,
 			&.drive:before {
 				font-size: 2rem;
 				width: 57px;
@@ -583,6 +585,8 @@ $mobile-padding: 23px;
 
 		.facebook h3,
 		.twitter h3,
+		.airbnb h3,
+		.neighbors h3,
 		.drive h3 {
 			padding-left: 72px;
 		}
