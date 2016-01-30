@@ -50,6 +50,7 @@
 			line-height: 1.4rem;
 			font-size: 1.3rem;
 			font-family: $font-bold;
+			font-weight: 700;
 		}
 
 		p {
@@ -64,6 +65,7 @@
 			display: block;
 			height: 35px;
 			font-family: $font-bold;
+			font-weight: 700;
 		}
 	}
 }
@@ -92,6 +94,7 @@
 		font-size: 1.25rem;
 		color: $dark-grey;
 		font-family: $font-bold;
+		font-weight: 700;
 		line-height: 1.65rem;
 	}
 
@@ -103,6 +106,7 @@
 			color: $dark-grey;
 			margin: 2rem 0rem 0rem;
 			font-family: $font-bold;
+			font-weight: 700;
 		}
 	}
 
@@ -142,6 +146,7 @@
 
 		h3 {
 			font-family: $font-bold;
+			font-weight: 700;
 			font-size: 2.125rem;
 			line-height: 2.65rem;
 			margin-top: 0;
@@ -204,6 +209,7 @@
 		margin: 6.5rem 0 0;
 		color: $dark-grey;
 		font-family: $font-bold;
+		font-weight: 700;
 	}
 
 	> p {
@@ -228,12 +234,14 @@
 			strong {
 				font-weight: normal;
 				font-family: $font-bold;
+				font-weight: 700;
 				color: #474745;
 			}
 
 			a {
 				background-repeat: no-repeat;
-    		width: 100%;
+    			width: 100%;
+				height: 70px;
 			}
 
 			p {
@@ -242,28 +250,21 @@
 
 			.partner-logo {
 				display:block;
+				text-indent: -9999px;
 			}
 
-			#red-cross {
-				@include retina-image('/assets/images/static/redcross', 258px 61px);
-				background-position-y: 10px;
+			#st-john-amulance {
+				@include retina-image('/assets/images/static/sja', 182px 70px);
 			}
 
-			#nen {
-				@include retina-image('/assets/images/static/nen', 142px 67px);
+			#british-red-cross {
+				@include retina-image('/assets/images/static/british-red-cross', 303px 70px);
 			}
 
-			#nert {
-				@include retina-image('/assets/images/static/nert', 69px 75px);
+			#neighbourhood-watch {
+				@include retina-image('/assets/images/static/neighbourhood-watch', 70px 70px);
 			}
 
-			#aux {
-				@include retina-image('/assets/images/static/auxiliary', 72px 72px);
-			}
-
-			#council {
-				@include retina-image('/assets/images/static/interfaith', 72px 72px);
-			}
 		}
 	}
 
