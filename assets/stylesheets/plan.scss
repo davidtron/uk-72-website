@@ -99,6 +99,11 @@
 	}
 }
 
+.plan-basics::before, .plan-basics::after {
+	content: " ";
+	display: table;
+}
+
 .print-this {
 	margin: 5rem 0 2rem;
 	height: 290px;
