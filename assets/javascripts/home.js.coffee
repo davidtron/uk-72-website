@@ -1,88 +1,112 @@
-states = [
-  { href: '#tab-before', contentSelector: '.slider-before', anchorSelector: '[href="#tab-before"]' }
-  { href: '#tab-during', contentSelector: '.slider-during', anchorSelector: '[href="#tab-during"]' }
-  { href: '#tab-after', contentSelector: '.slider-after', anchorSelector: '[href="#tab-after"]' }
+floodStates = [
+  { tabId: 'tab-before-flood', contentSelector: '#flood-slider-before' }
+  { tabId: 'tab-during-flood', contentSelector: '#flood-slider-during' }
+  { tabId: 'tab-after-flood',  contentSelector: '#flood-slider-after' }
 ]
 
-$(document).ready ->
+fireStates = [
+  { tabId: 'tab-before-fire', contentSelector: '#fire-slider-before' }
+  { tabId: 'tab-during-fire', contentSelector: '#fire-slider-during' }
+  { tabId: 'tab-after-fire',  contentSelector: '#fire-slider-after' }
+]
 
+
+$(document).ready ->
   $('a.pdf-languages-trigger').click ->
     $(this).toggleClass 'active'
     $('.download-languages').toggleClass 'active'
 
-  hasBefore = $('.basics-slider').hasClass("js-has-before")
+
+adviceTab = (elements, selectedTab) ->
+  console.log(selectedTab)
+  currentTab = selectedTab || elements[0].tabId
+  activeElem = _(elements).find (elem) -> elem.tabId == currentTab
+  if activeElem
+    inactiveElems = _(elements).filter (elem) -> elem.tabId != currentTab
+
+    $(activeElem.contentSelector).show()
+    $('#'+activeElem.tabId).parent('li').addClass 'active'
+
+    _(inactiveElems).each (inactiveElem) ->
+      $(inactiveElem.contentSelector).hide()
+      $('#'+inactiveElem.tabId).parent('li').removeClass 'active'
+
+adviceSlider = (name, states) ->
+  currentlySelected = null
+
+  hasBefore = $('#'+name+'-slider').hasClass("js-has-before")
 
   if hasBefore
-    window.sliderBefore = $('.slider-before .slider').bxSlider
+    sliderBefore = $('#'+name+'-slider-before .slider').bxSlider
       infiniteLoop: false,
       responsive: false,
       onSlideBefore: ($slideElement, oldIndex, newIndex) ->
         if newIndex > 0
-          $('.slider-before .bx-prev').removeClass 'disabled'
+          $('#'+name+'-slider-before .bx-prev').removeClass 'disabled'
         else
-          $('.slider-before .bx-prev').addClass 'disabled'
+          $('#'+name+'-slider-before .bx-prev').addClass 'disabled'
       onSlideAfter: ($slideElement, oldIndex, newIndex) ->
         sliderBefore.currentIndex = newIndex
+
   else
     states = [states[1], states[2]]
 
-  window.sliderDuring = $('.slider-during .slider').bxSlider
+  sliderDuring = $('#'+name+'-slider-during .slider').bxSlider
     infiniteLoop: false,
     responsive: false,
     onSlideBefore: ($slideElement, oldIndex, newIndex) ->
       if !hasBefore
         if newIndex > 0
-          $('.slider-during .bx-prev').removeClass 'disabled'
+          $('#'+name+'-slider-during .bx-prev').removeClass 'disabled'
         else
-          $('.slider-during .bx-prev').addClass 'disabled'
+          $('#'+name+'-slider-during .bx-prev').addClass 'disabled'
     onSlideAfter: ($slideElement, oldIndex, newIndex) ->
       sliderDuring.currentIndex = newIndex
 
-  window.sliderAfter = $('.slider-after .slider').bxSlider
+  sliderAfter = $('#'+name+'-slider-after .slider').bxSlider
     infiniteLoop: false,
     responsive: false,
     onSlideBefore: ($slideElement, oldIndex, newIndex) ->
       if newIndex == sliderAfter.getSlideCount()-1
-        $('.slider-after .bx-next').addClass 'disabled'
+        $('#'+name+'-slider-after .bx-next').addClass 'disabled'
       else
-        $('.slider-after .bx-next').removeClass 'disabled'
+        $('#'+name+'-slider-after .bx-next').removeClass 'disabled'
     onSlideAfter: ($slideElement, oldIndex, newIndex) ->
       sliderAfter.currentIndex = newIndex
 
-
   if hasBefore
-    $('.slider-before .bx-prev').addClass 'disabled'
+    $('#'+name+'-slider-before .bx-prev').addClass 'disabled'
   else
-    $('.slider-during .bx-prev').addClass 'disabled'
-
+    $('#'+name+'-slider-during .bx-prev').addClass 'disabled'
 
 
   if hasBefore
-    $('.slider-before').find('.bx-next').click (event) ->
+    $('#'+name+'-slider-before').find('.bx-next').click (event) ->
+      console.log('#'+name+'-slider-before')
       if sliderBefore.currentIndex == sliderBefore.getSlideCount()-1
-        window.location.hash = '#tab-during'
-        showActive states
+        currentlySelected = 'tab-during-'+name
+        adviceTab states, currentlySelected
       else
         sliderBefore.goToNextSlide()
 
-  $('.slider-during').find('.bx-prev').click (event) ->
+  $('#'+name+'-slider-during').find('.bx-prev').click (event) ->
     if hasBefore && sliderDuring.currentIndex == 0
-      window.location.hash = '#tab-before'
-      showActive states
+      currentlySelected = 'tab-before-'+name
+      adviceTab states, currentlySelected
     else
       sliderDuring.goToPrevSlide()
 
-  $('.slider-during').find('.bx-next').click (event) ->
+  $('#'+name+'-slider-during').find('.bx-next').click (event) ->
     if sliderDuring.currentIndex == sliderDuring.getSlideCount()-1
-      window.location.hash = '#tab-after'
-      showActive states
+      currentlySelected = 'tab-after-'+name
+      adviceTab states, currentlySelected
     else
       sliderDuring.goToNextSlide()
 
-  $('.slider-after').find('.bx-prev').click (event) ->
+  $('#'+name+'-slider-after').find('.bx-prev').click (event) ->
     if sliderAfter.currentIndex == 0
-      window.location.hash = '#tab-during'
-      showActive states
+      currentlySelected = 'tab-during-'+name
+      adviceTab states, currentlySelected
     else
       sliderAfter.goToPrevSlide()
 
@@ -93,16 +117,20 @@ $(document).ready ->
     duringIndex = 0
     beforeIndex = 1
 
-  if hasBefore && window.location.hash == states[0].href
-    $('.slider-during').hide()
-    $('.slider-after').hide()
-  else if window.location.hash == states[duringIndex].href
-    $('.slider-before').hide()
-    $('.slider-after').hide()
-  else if window.location.hash == states[beforeIndex].href
-    $('.slider-before').hide()
-    $('.slider-during').hide()
+  if hasBefore && currentlySelected == states[0].tabId
+    $('#'+name+'-slider-during').hide()
+    $('#'+name+'-slider-after').hide()
+  else if currentlySelected == states[duringIndex].tabId
+    $('#'+name+'-slider-before').hide()
+    $('#'+name+'-slider-after').hide()
+  else if currentlySelected == states[beforeIndex].tabId
+    $('#'+name+'-slider-before').hide()
+    $('#'+name+'-slider-during').hide()
 
-  showActive states
+  adviceTab states, currentlySelected
 
-window.onhashchange = -> showActive states
+
+$(document).ready ->
+  adviceSlider('flood', floodStates)
+  adviceSlider('fire', fireStates)
+
