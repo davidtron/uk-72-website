@@ -70,15 +70,15 @@ parse_args() {
 	# vars should be declared here, with sane defaults if applicable.
 
 	# Source directory & target branch.
-	deploy_directory=${GIT_DEPLOY_DIR:-dist}
-	deploy_branch=${GIT_DEPLOY_BRANCH:-gh-pages}
+	deploy_directory=dist
+	deploy_branch=gh-pages
 
 	#if no user identity is already set in the current git environment, use this:
-	default_username=${GIT_DEPLOY_USERNAME:-deploy.sh}
+	default_username=davidtron
 	default_email=${GIT_DEPLOY_EMAIL:-david@spiraltechnology.co.uk}
 
 	#repository to deploy to. must be readable and writable.
-	repo=${GIT_DEPLOY_REPO:-origin}
+	repo=https://$GITHUB_TOKEN@github.com/davidtron/uk-72-website.git
 
 	#append commit hash to the end of message by default
 	append_hash=${GIT_DEPLOY_APPEND_HASH:-true}
