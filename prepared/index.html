@@ -115,11 +115,6 @@
         </div>
     </div>
 
-    <!--<div class='story-type'>&ndash;&gt;-->
-        <!--<span class='icon-disaster-hurricane'></span>-->
-        <!--</div>-->
-
-
     <div id='flood-slider' class='basics-slider js-has-before'>
         <h2>Flood advice.</h2>
 
@@ -311,6 +306,72 @@
                         <p>You may need to arrange temporary accommodation.
                             Contact the mains gas, electricity and water suppliers.
                         </p>
+                    </li>
+                </ol>
+            </div>
+        </div>
+    </div>
+
+    <div id='powercut-slider' class='basics-slider js-has-before'>
+        <h2>Power Cut.</h2>
+        <div class='slider-header'>
+            <ul class='basics-tabs'>
+                <li class='active'>
+                    <a class='trigger-before' id='tab-before-powercut' onclick='adviceTab(powercutStates, this.id)'>Before a powercut</a>
+                </li>
+                <li>
+                    <a class='trigger-during' id='tab-during-powercut' onclick='adviceTab(powercutStates, this.id)'>During a powercut</a>
+                </li>
+                <li>
+                    <a class='trigger-after' id='tab-after-powercut' onclick='adviceTab(powercutStates, this.id)'>After a powercut</a>
+                </li>
+            </ul>
+            <a class='quick-list-trigger' href='quick_guide'>Print Full Guide</a>
+        </div>
+        <div class='slider-body'>
+            <div id='powercut-slider-before' class='slider-before'>
+                <ol class='slider quick-guide'>
+                    <li>
+                        <h2>Find where your fusebox is.</h2>
+                        <p>When the power goes out you need to check if it's a problem in your house or a power cut</p>
+                    </li>
+                    <li>
+                        <h2>Have a windup torch in your emergency pack.</h2>
+                        <p>When the power is out you'll need a torch.</p>
+                    </li>
+                </ol>
+            </div>
+            <div id='powercut-slider-during' class='slider-during'>
+                <ol class='slider quick-guide'>
+                    <li>
+                        <h2>Check if your neighbours have electricity.</h2>
+                        <p>If they don't, it's likely that the fault is on the electricity network.
+                            Contact your provider, don't assume that they will know that your power has gone off.
+                        </p>
+                    </li>
+                    <li>
+                        <h2>Prevent a spike.</h2>
+                        <p>Turn off and unplug all electrical equipment. Sensitive electronics can be damaged when the electricity comes back on.</p>
+                    </li>
+                    <li>
+                        <h2>Leave a light on.</h2>
+                        <p>So you know when the power is back on.</p>
+                    </li>
+                    <li>
+                        <h2>Check when the power may be restored.</h2>
+                        <p>You can check your outages here</p>
+                    </li>
+                </ol>
+            </div>
+            <div id='powercut-slider-after' class='slider-after'>
+                <ol class='slider quick-guide'>
+                    <li>
+                        <h2>Stay safe.</h2>
+                        <p>Do not touch downed electrical power lines and keep your family and pets away.</p>
+                    </li>
+                    <li>
+                        <h2>Check your freezer.</h2>
+                        <p>If food in freezer is colder than 4degrees C and has ice crystal on it, you can refreeze it.</p>
                     </li>
                 </ol>
             </div>
@@ -638,71 +699,6 @@
         </div>
     </div>
 
-    <div id='powercut-slider' class='basics-slider js-has-before'>
-        <h2>Power Cut.</h2>
-        <div class='slider-header'>
-            <ul class='basics-tabs'>
-                <li class='active'>
-                    <a class='trigger-before' id='tab-before-powercut' onclick='adviceTab(powercutStates, this.id)'>Before a powercut</a>
-                </li>
-                <li>
-                    <a class='trigger-during' id='tab-during-powercut' onclick='adviceTab(powercutStates, this.id)'>During a powercut</a>
-                </li>
-                <li>
-                    <a class='trigger-after' id='tab-after-powercut' onclick='adviceTab(powercutStates, this.id)'>After a powercut</a>
-                </li>
-            </ul>
-            <a class='quick-list-trigger' href='quick_guide'>Print Full Guide</a>
-        </div>
-        <div class='slider-body'>
-            <div id='powercut-slider-before' class='slider-before'>
-                <ol class='slider quick-guide'>
-                    <li>
-                        <h2>Find where your fusebox is.</h2>
-                        <p>When the power goes out you need to check if it's a problem in your house or a power cut</p>
-                    </li>
-                    <li>
-                        <h2>Have a windup torch in your emergency pack.</h2>
-                        <p>When the power is out you'll need a torch.</p>
-                    </li>
-                </ol>
-            </div>
-            <div id='powercut-slider-during' class='slider-during'>
-                <ol class='slider quick-guide'>
-                    <li>
-                        <h2>Check if your neighbours have electricity.</h2>
-                        <p>If they don't, it's likely that the fault is on the electricity network.
-                            Contact your provider, don't assume that they will know that your power has gone off.
-                        </p>
-                    </li>
-                    <li>
-                        <h2>Prevent a spike.</h2>
-                        <p>Turn off and unplug all electrical equipment. Sensitive electronics can be damaged when the electricity comes back on.</p>
-                    </li>
-                    <li>
-                        <h2>Leave a light on.</h2>
-                        <p>So you know when the power is back on.</p>
-                    </li>
-                    <li>
-                        <h2>Check when the power may be restored.</h2>
-                        <p>You can check your outages here</p>
-                    </li>
-                </ol>
-            </div>
-            <div id='powercut-slider-after' class='slider-after'>
-                <ol class='slider quick-guide'>
-                    <li>
-                        <h2>Stay safe.</h2>
-                        <p>Do not touch downed electrical power lines and keep your family and pets away.</p>
-                    </li>
-                    <li>
-                        <h2>Check your freezer.</h2>
-                        <p>If food in freezer is colder than 4degrees C and has ice crystal on it, you can refreeze it.</p>
-                    </li>
-                </ol>
-            </div>
-        </div>
-    </div>
 
     <div id='winterweather-slider' class='basics-slider'>
         <h2>Winter weather.</h2>
@@ -772,25 +768,23 @@
         </div>
     </div>
 
-    <div id='storm-slider' class='basics-slider'>
-        <h2>Storm.</h2>
-        <p>
-            Print our storm Guide to learn what to do.
-        </p>
+    <div id='thunder-slider' class='basics-slider'>
+        <h2>Thunder and Lightning.</h2>
 
         <div class='slider-header'>
             <ul class='basics-tabs'>
+
                 <li>
-                    <a class='trigger-during' id='tab-during-storm' onclick='adviceTab(stormStates, this.id)'>Before a storm</a>
+                    <a class='trigger-during' id='tab-during-thunder' onclick='adviceTab(thunderStates, this.id)'>Before a thunderstorm</a>
                 </li>
                 <li>
-                    <a class='trigger-after' id='tab-after-storm' onclick='adviceTab(stormStates, this.id)'>During a storm</a>
+                    <a class='trigger-after' id='tab-after-thunder' onclick='adviceTab(thunderStates, this.id)'>During a thunderstorm</a>
                 </li>
             </ul>
             <a class='quick-list-trigger' href='quick_guide'>Print Full Guide</a>
         </div>
         <div class='slider-body'>
-            <div id='storm-slider-during' class='slider-during'>
+            <div id='thunder-slider-during' class='slider-during'>
                 <ol class='slider quick-guide'>
                     <li>
                         <h2>Keep an eye on weather forecasts.</h2>
@@ -798,15 +792,15 @@
                     </li>
                     <li>
                         <h2>If you are outdoors seek shelter if possible.</h2>
-                        <p>Once you hear thunder you are already in range of lightening strike.</p>
+                        <p>Once you hear thunder you are already in range of lightning strike.</p>
                     </li>
                 </ol>
             </div>
-            <div id='storm-slider-after' class='slider-after'>
+            <div id='thunder-slider-after' class='slider-after'>
                 <ol class='slider quick-guide'>
                     <li>
                         <h2>Shut doors and windows.</h2>
-                        <p>Stay inside during the storm and away from windows</p>
+                        <p>Stay inside during the thunder and away from windows</p>
                     </li>
                     <li>
                         <h2>Avoid the phone and taps.</h2>
@@ -824,6 +818,94 @@
                     <li>
                         <h2>If driving.</h2>
                         <p>Stop and park away from trees and overhead power lines.</p>
+                    </li>
+                </ol>
+            </div>
+        </div>
+    </div>
+
+    <div id='storm-slider' class='basics-slider js-has-before'>
+        <h2>Storm.</h2>
+
+        <div class='slider-header'>
+            <ul class='basics-tabs'>
+                <li>
+                    <a class='trigger-before' id='tab-before-storm' onclick='adviceTab(stormStates, this.id)'>Before</a>
+                </li>
+                <li>
+                    <a class='trigger-during' id='tab-during-storm' onclick='adviceTab(stormStates, this.id)'>During a storm</a>
+                </li>
+                <li>
+                    <a class='trigger-after' id='tab-after-storm' onclick='adviceTab(stormStates, this.id)'>After</a>
+                </li>
+            </ul>
+            <a class='quick-list-trigger' href='quick_guide'>Print Full Guide</a>
+        </div>
+        <div class='slider-body'>
+            <div id='storm-slider-before' class='slider-before'>
+                <ol class='slider quick-guide'>
+                    <li>
+                        <h2>Secure loose objects.</h2>
+                        <p>Secure loose objects such as ladders, garden furniture or anything else that could be blown into windows and other glazing and break them.</p>
+                    </li>
+                    <li>
+                        <h2>Close doors and windows.</h2>
+                        <p>Close and securely fasten doors and windows, particularly those on the windward side of the house, and especially large doors such as those on garages.</p>
+                    </li>
+                    <li>
+                        <h2>Park in tyour garage.</h2>
+                        <p>Park vehicles in a garage, if available; otherwise keep them clear of buildings, trees, walls and fences.</p>
+                    </li>
+                    <li>
+                        <h2>Close loft trapdoors</h2>
+                        <p>Close and secure loft trapdoors with bolts, particularly if roof pitch is less than 30°.
+                        </p>
+                    </li>
+                    <li>
+                        <h2>Use shutters if you have them</h2>
+                        <p>If the house is fitted with storm shutters over the windows then ensure that these are closed and fastened.</p>
+                    </li>
+                    <li>
+                        <h2>Check your chimney</h2>
+                        <p>If chimney stacks are tall and in poor condition, move beds away from areas directly below them.</p>
+                    </li>
+                </ol>
+            </div>
+
+            <div id='storm-slider-during' class='slider-during'>
+                <ol class='slider quick-guide'>
+                    <li>
+                        <h2>Stay indoors.</h2>
+                        <p>Stay indoors as much as possible.  Open internal doors only as needed, and close them behind you.</p>
+                    </li>
+                    <li>
+                        <h2>If outside</h2>
+                        <p>try not to walk or shelter close to buildings and trees.
+                            Keep away from the sheltered side of boundary walls and fences - if these structures fail, they will collapse on this side.
+                            Do not go outside to repair damage while the storm is in progress.
+                            If possible, enter and leave your house through doors in the sheltered side, closing them behind you.</p>
+                    </li>
+                    <li>
+                        <h2>If driving.</h2>
+                        <p>
+                            Do not drive unless your journey is really necessary.
+                            Take care when driving on exposed routes such as bridges, or high open roads, delay your journey or find alternative routes if possible.
+                            Slow down and be aware of side winds, particular care should be taken if you are towing or are a high sided vehicle.
+                        </p>
+                    </li>
+                </ol>
+            </div>
+            <div id='storm-slider-after' class='slider-after'>
+                <ol class='slider quick-guide'>
+                    <li>
+                        <h2>Be careful</h2>
+                        <p>Be careful not to touch any electrical/telephone cables that have been blown down or are still hanging.
+                            Do not walk too close to walls, buildings and trees as they could have been weakened.
+                        </p>
+                    </li>
+                    <li>
+                        <h2>Check on neighbours.</h2>
+                        <p>Make sure that any vulnerable neighbours or relatives are safe and help them make arrangements for any repairs.</p>
                     </li>
                 </ol>
             </div>

@@ -1,4 +1,4 @@
-var adviceSlider, adviceTab, breakdownStates, chemicalStates, droughtStates, fireStates, floodStates, fluStates, heatwaveStates, powercutStates, stormStates, terroristStates, winterweatherStates;
+var adviceSlider, adviceTab, breakdownStates, chemicalStates, droughtStates, fireStates, floodStates, fluStates, heatwaveStates, powercutStates, stormStates, terroristStates, thunderStates, winterweatherStates;
 
 floodStates = [
   {
@@ -127,6 +127,19 @@ stormStates = [
   }, {
     tabId: 'tab-after-storm',
     contentSelector: '#storm-slider-after'
+  }
+];
+
+thunderStates = [
+  {
+    tabId: 'tab-before-thunder',
+    contentSelector: '#thunder-slider-before'
+  }, {
+    tabId: 'tab-during-thunder',
+    contentSelector: '#thunder-slider-during'
+  }, {
+    tabId: 'tab-after-thunder',
+    contentSelector: '#thunder-slider-after'
   }
 ];
 
@@ -291,6 +304,7 @@ $(document).ready(function() {
   adviceSlider('heatwave', heatwaveStates);
   adviceSlider('powercut', powercutStates);
   adviceSlider('winterweather', winterweatherStates);
+  adviceSlider('thunder', thunderStates);
   adviceSlider('storm', stormStates);
   return adviceSlider('terrorist', terroristStates);
 });
