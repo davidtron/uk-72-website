@@ -21,8 +21,8 @@ try {
 sass.render({
     file: 'assets/stylesheets/application.scss',
     includePaths: neat.with('assets'),
-    outputStyle: 'compressed',
-    sourceMap: true,
+    //outputStyle: 'compressed',
+    //sourceMap: true,
     outFile: outputCssFile,
 }, function(error, result) { // node-style callback from v3.0.0 onwards
     if(!error){
