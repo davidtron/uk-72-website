@@ -71,7 +71,6 @@ $(document).ready ->
 
 
 adviceTab = (elements, selectedTab) ->
-  console.log(selectedTab)
   currentTab = selectedTab || elements[0].tabId
   activeElem = _(elements).find (elem) -> elem.tabId == currentTab
   if activeElem
