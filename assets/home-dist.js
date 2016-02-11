@@ -152,7 +152,6 @@ $(document).ready(function() {
 
 adviceTab = function(elements, selectedTab) {
   var activeElem, currentTab, inactiveElems;
-  console.log(selectedTab);
   currentTab = selectedTab || elements[0].tabId;
   activeElem = _(elements).find(function(elem) {
     return elem.tabId === currentTab;

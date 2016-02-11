@@ -88,15 +88,11 @@ button, input, optgroup, select, textarea {
 
 .input-group-btn:last-child>.btn, .input-group-btn:last-child>.btn-group {
     margin-left: -1px;
+    margin-right: -1px;
 }
 
 .input-group-btn>.btn:active, .input-group-btn>.btn:focus, .input-group-btn>.btn:hover {
     z-index: 2;
-}
-
-.input-group .form-control:last-child, .input-group-addon:last-child, .input-group-btn:first-child>.btn-group:not(:first-child)>.btn, .input-group-btn:first-child>.btn:not(:first-child), .input-group-btn:last-child>.btn, .input-group-btn:last-child>.btn-group>.btn, .input-group-btn:last-child>.dropdown-toggle {
-    border-top-left-radius: 0;
-    border-bottom-left-radius: 0;
 }
 
 .input-group-btn>.btn {
@@ -139,7 +135,6 @@ button, input, optgroup, select, textarea {
     user-select: none;
     background-image: none;
     border: 1px solid transparent;
-    border-radius: 4px;
 }
 
 button, input, select, textarea {
@@ -149,11 +144,11 @@ button, input, select, textarea {
 }
 
 .warning-list a {
-    color: #333333;
+    color: #9b9b9b;
     text-decoration: none;
 }
 
 .warning-list a.focus, .warning-list a:focus, .warning-list a:hover {
-    color: #333333;
+    color: #9b9b9b;
     text-decoration: underline;
 }
