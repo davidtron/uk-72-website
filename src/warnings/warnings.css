@@ -144,11 +144,11 @@ button, input, select, textarea {
 }
 
 .warning-list a {
-    color: #333333;
+    color: #9b9b9b;
     text-decoration: none;
 }
 
 .warning-list a.focus, .warning-list a:focus, .warning-list a:hover {
-    color: #333333;
+    color: #9b9b9b;
     text-decoration: underline;
 }
