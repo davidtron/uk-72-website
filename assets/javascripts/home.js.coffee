@@ -58,6 +58,12 @@ stormStates = [
   { tabId: 'tab-after-storm',  contentSelector: '#storm-slider-after' }
 ]
 
+thunderStates = [
+  { tabId: 'tab-before-thunder', contentSelector: '#thunder-slider-before' }
+  { tabId: 'tab-during-thunder', contentSelector: '#thunder-slider-during' }
+  { tabId: 'tab-after-thunder',  contentSelector: '#thunder-slider-after' }
+]
+
 terroristStates = [
   { tabId: 'tab-before-terrorist', contentSelector: '#terrorist-slider-before' }
   { tabId: 'tab-during-terrorist', contentSelector: '#terrorist-slider-during' }
@@ -192,6 +198,7 @@ $(document).ready ->
   adviceSlider('heatwave', heatwaveStates)
   adviceSlider('powercut', powercutStates)
   adviceSlider('winterweather', winterweatherStates)
+  adviceSlider('thunder', thunderStates)
   adviceSlider('storm', stormStates)
   adviceSlider('terrorist', terroristStates)
 
