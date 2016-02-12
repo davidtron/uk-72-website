@@ -2334,28 +2334,9 @@ $mobile-padding: 23px;
 
 	.full-img-article {
 		@include retina-image('/assets/images/mobile/gardening', 320px 514px, jpg);
+		background-size: 100%;
+		background-repeat: no-repeat;
 	}
-
-	// .home .page-intro .big-title {
-	// 	@include retina-image('/assets/images/mobile/home-header', 320px 273px, jpg);
-	// 	background-size: auto;
-	// }
-
-	// .opening {
-	// 	@include retina-image('/assets/images/mobile/get-connected-header', 320px 273px, jpg);
-	// }
-
-	// .opening.supplies {
-	// 	@include retina-image('/assets/images/mobile/supplies-header', 320px 273px, jpg);
-	// }
-
-	// .about .opening {
-	// 	@include retina-image('/assets/images/mobile/about-us-header', 320px 273px, jpg);
-	// }
-
-	// .plan .em-plan {
-	// 	@include retina-image('/assets/images/mobile/make-plan-header', 320px 273px, jpg);
-	// }
 
 	.learn-more ul li #red-cross {
 		@include retina-image('/assets/images/mobile/redcross', 176px 45px);
