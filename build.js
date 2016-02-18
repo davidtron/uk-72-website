@@ -59,6 +59,4 @@ environment.appendPath('assets/components');
 processJs('application', environment);
 processJs('home', environment);
 processJs('supplies', environment);
-
-
-
+processJs('plan', environment);

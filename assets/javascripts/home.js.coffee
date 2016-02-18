@@ -70,12 +70,6 @@ terroristStates = [
   { tabId: 'tab-after-terrorist',  contentSelector: '#terrorist-slider-after' }
 ]
 
-$(document).ready ->
-  $('a.pdf-languages-trigger').click ->
-    $(this).toggleClass 'active'
-    $('.download-languages').toggleClass 'active'
-
-
 adviceTab = (elements, selectedTab) ->
   currentTab = selectedTab || elements[0].tabId
   activeElem = _(elements).find (elem) -> elem.tabId == currentTab
@@ -201,5 +195,3 @@ $(document).ready ->
   adviceSlider('thunder', thunderStates)
   adviceSlider('storm', stormStates)
   adviceSlider('terrorist', terroristStates)
-
-
