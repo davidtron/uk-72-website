@@ -6,8 +6,10 @@ class Header
     init: ->
         if !initilized
             _initializeMobileMenu()
-            _initializeMobileActiveBtn()
-            _initializeActiveButton()
+
+            # not currently used as each page is hard coded
+            #_initializeMobileActiveBtn()
+            #_initializeActiveButton()
             initilized = true
 
     # Initializes jquery.mobile-menu.js

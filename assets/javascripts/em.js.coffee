@@ -1,3 +1,4 @@
+# Currently unused
 $( ->
     reports = [
         { href: '#tab-citizen-updates', contentSelector: '.citizen-reports', anchorSelector: '[href="#tab-citizen-updates"]' }
