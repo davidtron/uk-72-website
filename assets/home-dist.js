@@ -156,13 +156,6 @@ terroristStates = [
   }
 ];
 
-$(document).ready(function() {
-  return $('a.pdf-languages-trigger').click(function() {
-    $(this).toggleClass('active');
-    return $('.download-languages').toggleClass('active');
-  });
-});
-
 adviceTab = function(elements, selectedTab) {
   var activeElem, currentTab, inactiveElems;
   currentTab = selectedTab || elements[0].tabId;

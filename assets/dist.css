@@ -2137,6 +2137,7 @@ a.checklist:before {
 
 .download-languages {
   position: absolute;
+  z-index: -1;
   top: 55px;
   left: 0;
   border: 1px solid #C2C2C2;
