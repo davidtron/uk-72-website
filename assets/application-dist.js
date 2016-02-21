@@ -10238,8 +10238,6 @@ Header = (function() {
   Header.prototype.init = function() {
     if (!initilized) {
       _initializeMobileMenu();
-      _initializeMobileActiveBtn();
-      _initializeActiveButton();
       return initilized = true;
     }
   };
