@@ -11,34 +11,7 @@
     /*width: 73.607%;*/
 }
 
-/* Mobile view stack the warnings and map and make map container smaller */
-@media screen and (max-width: 480px) {
 
-    .col-md-4 {
-        float: none;
-        width: 100%;
-        padding-top: 293px;
-    }
-    .col-md-8 {
-        float: none;
-        width: 100%;
-        position: fixed;
-        top: 43px;
-        z-index: 10;
-    }
-
-    .warning-list {
-        max-height: none !important;
-    }
-
-    .input-group {
-        padding-top: 50px;
-    }
-
-    .warning-map {
-        height: 300px !important;
-    }
-}
 
 .input-group {
     position: relative;
@@ -165,4 +138,38 @@ button, input, select, textarea {
 .warning-list a.focus, .warning-list a:focus, .warning-list a:hover {
     color: #9b9b9b;
     text-decoration: underline;
+}
+
+/* Mobile view stack the warnings and map and make map container smaller */
+@media screen and (max-width: 480px) {
+
+    .col-md-4 {
+        float: none;
+        width: 100%;
+        padding-top: 293px;
+    }
+    .col-md-8 {
+        float: none;
+        width: 100%;
+        position: fixed;
+        top: 43px;
+        z-index: 10;
+    }
+
+    .warning-list {
+        max-height: none !important;
+    }
+
+    .input-group {
+        padding-top: 50px;
+        position: fixed;
+    }
+
+    .warning-map {
+        height: 300px !important;
+    }
+
+    .warnings, .no-warnings {
+        padding-top: 85px;
+    }
 }
