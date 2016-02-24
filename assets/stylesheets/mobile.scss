@@ -212,8 +212,15 @@ $mobile-padding: 23px;
 					font-family: $font-bold;
 				}
 
+				li.mobile-warnings {
+					strong {
+						color: $highlight-dark;
+					}
+				}
+
 				li.em-link {
 					padding: $mobile-padding;
+					padding-bottom: 0px;
 					background-color: #F4F4F4;
 
 					p {
@@ -230,18 +237,14 @@ $mobile-padding: 23px;
 					}
 				}
 
+				li.em-li {
+					a {
+						font-size: 1.025rem;
+						padding-left: 20px;
+					}
+				}
 			}
 
-			.try-demo {
-				font-size: 0.9rem;
-				border-radius: 0.5rem;
-				color: #FFF;
-				background: #BBBDC0;
-				position: absolute;
-				right: 1rem;
-				top: 14.6rem;
-				padding: 0.4rem 0.8rem 0.3rem;
-			}
 		}
 	}
 
@@ -423,6 +426,9 @@ $mobile-padding: 23px;
 				}
 			}
 
+			.prepare-home,
+			.prepare-weather,
+			.prepare-uk,
 			.learn-connect,
 			.learn-supplies,
 			.learn-plan {

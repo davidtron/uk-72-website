@@ -1,4 +1,4 @@
-.stories {
+.prepare {
 
   .intro-mobile {
     display: none;
@@ -6,6 +6,54 @@
 
   .opening {
     @include retina-image('/assets/images/static/flood', 1024px 683px, jpg);
+
+    div {
+      float: left;
+      margin-left: 0;
+    }
+  }
+}
+
+.prepare-home {
+
+  .intro-mobile {
+    display: none;
+  }
+
+  .opening {
+    @include retina-image('/assets/images/static/flood', 1024px 683px, jpg);
+
+    div {
+      float: left;
+      margin-left: 0;
+    }
+  }
+}
+
+.prepare-weather {
+
+  .intro-mobile {
+    display: none;
+  }
+
+  .opening {
+    @include retina-image('/assets/images/static/rain', 1020px 574px, jpg);
+
+    div {
+      float: left;
+      margin-left: 0;
+    }
+  }
+}
+
+.prepare-uk {
+
+  .intro-mobile {
+    display: none;
+  }
+
+  .opening {
+    @include retina-image('/assets/images/static/breakdown', 1020px 680px, jpg);
 
     div {
       float: left;

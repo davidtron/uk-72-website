@@ -165,6 +165,19 @@
 				@include retina-image('/assets/images/static/home3_3', 337px 345px);
 				@include icon(#FFF,3.5rem,$phone,$highlight,-50px,45px);
 			}
+
+            .prepare-home {
+                @include retina-image('/assets/images/static/prepare_flood', 337px 345px, jpg);
+                @include icon(#FFF,3.5rem,$house,$highlight,-50px,45px);
+            }
+            .prepare-weather {
+                @include retina-image('/assets/images/static/prepare_rain', 337px 345px, jpg);
+                @include icon(#FFF,3.5rem,$hurricane,$highlight,-50px,45px);
+            }
+            .prepare-uk {
+                @include retina-image('/assets/images/static/prepare_breakdown', 337px 345px, jpg);
+                @include icon(#FFF,3.5rem,$mobile-phone,$highlight,-50px,45px);
+            }
 		}
 	}
 }
